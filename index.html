@@ -2,6 +2,7 @@
   Proprietary Code. 100% Owned by Krishana Gupta.
   Unauthorized copying, modification, or distribution is strictly prohibited.
   YouTube: @new2ushorts
+  Version: 15.0 — Unlimited History + 10 New Features
 -->
 <!DOCTYPE html>
 <html lang="en" id="krish-root">
@@ -9,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="author" content="Krishana Gupta">
-<meta name="description" content="ResultX Ultimate Pro — BTEUP Result Checker by Krishana Gupta">
-<title>ResultX Ultimate — by Krishana Gupta</title>
+<meta name="description" content="ResultX Ultimate Pro v15 — BTEUP Result Checker by Krishana Gupta">
+<title>ResultX v15 Ultimate — by Krishana Gupta</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
 <style>
 /* Proprietary. Krishana Gupta. All Rights Reserved. */
@@ -32,19 +33,12 @@
   --kg-glow:0 0 30px rgba(139,92,246,0.3);
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-body{font-family:var(--font);background:var(--kg-bg);background-attachment:fixed;color:var(--kg-text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 0 50px;overflow-x:hidden;transition:background 0.4s,color 0.3s;}
+body{font-family:var(--font);background:var(--kg-bg);background-attachment:fixed;color:var(--kg-text);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:0 0 60px;overflow-x:hidden;transition:background 0.4s,color 0.3s;}
 ::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-thumb{background:var(--kg-primary);border-radius:4px;}
 #krish-confetti{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;}
 
 /* ── TOP STICKY BAR ── */
-#krish-topbar{
-  position:sticky;top:0;width:100%;z-index:900;
-  background:linear-gradient(90deg,#0a0015,#1a003a,#0f002a,#1a003a,#0a0015);
-  background-size:400% 100%;animation:kgTBShimmer 5s linear infinite;
-  border-bottom:1px solid rgba(255,215,0,0.3);
-  padding:10px 14px;display:flex;align-items:center;justify-content:center;
-  gap:10px;text-decoration:none;overflow:hidden;cursor:pointer;
-}
+#krish-topbar{position:sticky;top:0;width:100%;z-index:900;background:linear-gradient(90deg,#0a0015,#1a003a,#0f002a,#1a003a,#0a0015);background-size:400% 100%;animation:kgTBShimmer 5s linear infinite;border-bottom:1px solid rgba(255,215,0,0.3);padding:10px 14px;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;overflow:hidden;cursor:pointer;}
 @keyframes kgTBShimmer{0%{background-position:0% 50%}100%{background-position:100% 50%}}
 #krish-topbar::before{content:'';position:absolute;top:0;left:-100%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,215,0,0.12),transparent);animation:kgSweep 2.5s ease-in-out infinite;}
 @keyframes kgSweep{0%{left:-100%}100%{left:200%}}
@@ -59,15 +53,9 @@ body{font-family:var(--font);background:var(--kg-bg);background-attachment:fixed
 #krish-container{width:100%;max-width:480px;padding:0 15px;margin-top:18px;z-index:10;}
 
 /* ── MAIN CARD ── */
-.kg-card{
-  background:var(--kg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border:1px solid var(--kg-border);border-radius:28px;padding:2rem;
-  box-shadow:var(--kg-shadow);position:relative;overflow:hidden;
-  animation:kgSlideUp .7s cubic-bezier(.2,.8,.2,1);margin-bottom:18px;
-}
+.kg-card{background:var(--kg-card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--kg-border);border-radius:28px;padding:2rem;box-shadow:var(--kg-shadow);position:relative;overflow:hidden;animation:kgSlideUp .7s cubic-bezier(.2,.8,.2,1);margin-bottom:18px;}
 @keyframes kgSlideUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 .kg-card::before{content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;background:var(--kg-primary);filter:blur(80px);opacity:.1;z-index:0;}
-
 .kg-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem;position:relative;z-index:1;}
 .kg-brand-title{font-family:'Rajdhani',sans-serif;font-size:1.85rem;font-weight:700;background:linear-gradient(135deg,var(--kg-primary),var(--kg-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.5px;line-height:1.1;}
 .kg-brand-sub{font-size:.68rem;font-family:var(--mono);color:var(--kg-muted);font-weight:600;letter-spacing:1.5px;}
@@ -108,15 +96,43 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
 .kg-open-btn{background:var(--kg-green);color:#fff;text-decoration:none;padding:14px;border-radius:14px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 5px 15px rgba(16,185,129,.3);transition:all .3s;}
 .kg-open-btn:hover{transform:translateY(-2px);}
 
-/* ── HISTORY ── */
+/* ── HISTORY v15 (HIDDEN BY DEFAULT) ── */
 .kg-history{margin-top:2rem;padding-top:1.4rem;border-top:1px solid var(--kg-border);}
-.kg-hist-title{font-size:.82rem;font-weight:700;color:var(--kg-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:.8rem;display:flex;justify-content:space-between;}
-.kg-clear-btn{color:var(--kg-red);cursor:pointer;font-size:.72rem;text-transform:none;letter-spacing:0;background:none;border:none;}
-.kg-hist-list{display:flex;flex-direction:column;gap:8px;}
-.kg-hist-card{background:var(--kg-input);padding:11px 14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;border:1px solid transparent;transition:border-color .2s;}
-.kg-hist-card:hover{border-color:var(--kg-primary);}
+.kg-hist-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem;cursor:pointer;}
+.kg-hist-toggle-row{display:flex;align-items:center;gap:8px;}
+.kg-hist-icon{font-size:1.1rem;}
+.kg-hist-label{font-size:.82rem;font-weight:700;color:var(--kg-muted);text-transform:uppercase;letter-spacing:1px;}
+.kg-hist-count{background:var(--kg-primary);color:#fff;font-size:.62rem;font-weight:800;padding:2px 8px;border-radius:20px;min-width:22px;text-align:center;}
+.kg-hist-actions{display:flex;gap:6px;align-items:center;}
+.kg-clear-btn{color:var(--kg-red);cursor:pointer;font-size:.72rem;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);padding:3px 10px;border-radius:8px;}
+.kg-hist-toggle-btn{font-size:.72rem;color:var(--kg-primary);cursor:pointer;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);padding:3px 10px;border-radius:8px;transition:all .2s;white-space:nowrap;}
+/* Search bar in history */
+.kg-hist-search{width:100%;padding:9px 14px;font-size:.82rem;background:var(--kg-input);border:1.5px solid var(--kg-border);border-radius:10px;color:var(--kg-text);font-family:var(--mono);outline:none;margin-bottom:10px;transition:border-color .2s;}
+.kg-hist-search:focus{border-color:var(--kg-primary);}
+/* History body (collapsible) */
+#krish-history-body{display:none;animation:kgSlideDown .3s ease;}
+#krish-history-body.open{display:block;}
+@keyframes kgSlideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.kg-hist-list{display:flex;flex-direction:column;gap:8px;max-height:340px;overflow-y:auto;padding-right:2px;}
+.kg-hist-list::-webkit-scrollbar{width:4px;}
+.kg-hist-list::-webkit-scrollbar-thumb{background:var(--kg-primary);border-radius:4px;}
+.kg-hist-card{background:var(--kg-input);padding:11px 14px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;border:1px solid transparent;transition:border-color .2s,background .2s;}
+.kg-hist-card:hover{border-color:var(--kg-primary);background:rgba(99,102,241,.05);}
+.kg-hist-card.pinned{border-color:var(--kg-gold);background:rgba(245,158,11,.05);}
 .h-enroll{font-family:var(--mono);font-weight:700;font-size:.88rem;}
-.h-date{font-size:.73rem;color:var(--kg-muted);}
+.h-meta{font-size:.72rem;color:var(--kg-muted);display:flex;gap:8px;flex-wrap:wrap;margin-top:2px;}
+.h-pin-btn{font-size:.85rem;cursor:pointer;opacity:.5;transition:opacity .2s;background:none;border:none;padding:0 4px;}
+.h-pin-btn:hover,.h-pin-btn.active{opacity:1;}
+.h-del-btn{font-size:.8rem;cursor:pointer;color:var(--kg-red);opacity:.5;background:none;border:none;padding:0 4px;transition:opacity .2s;}
+.h-del-btn:hover{opacity:1;}
+.kg-hist-footer{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:.72rem;color:var(--kg-muted);}
+.kg-export-btn{font-size:.72rem;color:var(--kg-primary);cursor:pointer;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);padding:3px 10px;border-radius:8px;transition:all .2s;}
+
+/* ── STATS STRIP ── */
+.kg-stats-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1.3rem;}
+.kg-stat-box{background:var(--kg-input);border-radius:14px;padding:12px 8px;text-align:center;border:1px solid var(--kg-border);}
+.kg-stat-num{font-family:var(--mono);font-size:1.3rem;font-weight:800;color:var(--kg-primary);line-height:1;}
+.kg-stat-lbl{font-size:.62rem;color:var(--kg-muted);margin-top:3px;text-transform:uppercase;letter-spacing:.5px;}
 
 /* ── PEPLUS CARD ── */
 .kg-pep-card{display:block;text-decoration:none;border-radius:24px;overflow:hidden;cursor:pointer;margin-bottom:18px;animation:kgSlideUp .7s cubic-bezier(.2,.8,.2,1) .15s both;}
@@ -130,7 +146,7 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
 .kg-timer-lbl{font-size:11.5px;color:#ef4444;font-weight:600;display:flex;align-items:center;gap:5px;}
 .kg-timer-num{font-family:var(--mono);font-size:15px;font-weight:700;color:#ffd700;letter-spacing:2px;}
 .kg-pep-h{font-family:'Rajdhani',sans-serif;font-size:clamp(1.35rem,5vw,1.8rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:6px;}
-.kg-gold{background:linear-gradient(135deg,#ffd700,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.kg-gold-text{background:linear-gradient(135deg,#ffd700,#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .kg-pep-sub{font-size:12.5px;color:rgba(255,255,255,.6);margin-bottom:16px;line-height:1.55;}
 .kg-pep-sub strong{color:#ffd700;}
 .kg-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px;}
@@ -160,17 +176,16 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
 /* ── MODALS ── */
 .kg-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.65);backdrop-filter:blur(6px);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
 .kg-overlay.active{opacity:1;pointer-events:all;}
-.kg-modal{background:var(--kg-card);width:90%;max-width:340px;padding:2rem;border-radius:24px;text-align:center;transform:scale(.85);transition:transform .3s;border:1px solid var(--kg-border);box-shadow:0 30px 60px rgba(0,0,0,.3);}
+.kg-modal{background:var(--kg-card);width:90%;max-width:340px;padding:2rem;border-radius:24px;text-align:center;transform:scale(.85);transition:transform .3s;border:1px solid var(--kg-border);box-shadow:0 30px 60px rgba(0,0,0,.3);max-height:90vh;overflow-y:auto;}
 .kg-overlay.active .kg-modal{transform:scale(1);}
 .kg-modal-btn{background:var(--kg-primary);color:#fff;border:none;padding:10px 28px;border-radius:12px;margin-top:14px;cursor:pointer;font-weight:700;font-size:.9rem;transition:transform .15s;}
 .kg-modal-btn:hover{transform:scale(1.05);}
-
 /* EASTER EGG HACKER MODAL */
 #krish-hacker-modal .kg-modal{background:linear-gradient(135deg,#0a0015,#1a003a);border:1.5px solid rgba(0,255,136,.4);color:#fff;}
 .kg-ascii{font-family:var(--mono);font-size:6.5px;color:#00ff88;line-height:1.3;letter-spacing:1px;margin-bottom:12px;white-space:pre;text-align:center;}
 .kg-hacker-name{font-family:'Rajdhani',sans-serif;font-size:1.75rem;font-weight:700;background:linear-gradient(135deg,#00ff88,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;}
 
-/* FLOATING POPUP */
+/* ── FLOATING POPUP ── */
 #krish-float-popup{position:fixed;bottom:-280px;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:420px;z-index:950;transition:bottom .5s cubic-bezier(.34,1.56,.64,1);}
 #krish-float-popup.show{bottom:18px;}
 .kg-float-inner{background:linear-gradient(135deg,#0d001f,#200050);border:1.5px solid rgba(255,215,0,.5);border-radius:20px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.6);position:relative;overflow:hidden;}
@@ -182,13 +197,32 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
 .kg-popup-title span{color:#ffd700;}
 .kg-popup-desc{font-size:12px;color:rgba(255,255,255,.6);margin-bottom:12px;line-height:1.5;}
 .kg-popup-btn{display:block;width:100%;padding:12px;border-radius:12px;background:linear-gradient(135deg,#ffd700,#ff8c00);color:#000;text-decoration:none;font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:800;letter-spacing:1px;text-align:center;border:none;cursor:pointer;animation:kgCtaGlow 1.5s ease-in-out infinite alternate;}
+
+/* ── NEW v15: BOTTOM NAV ── */
+#krish-bottom-nav{position:fixed;bottom:0;left:0;width:100%;background:var(--kg-card);border-top:1px solid var(--kg-border);display:flex;justify-content:space-around;align-items:center;padding:8px 0 10px;z-index:800;backdrop-filter:blur(20px);}
+.kg-nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:4px 12px;border-radius:12px;transition:background .2s;color:var(--kg-muted);font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+.kg-nav-item.active{color:var(--kg-primary);}
+.kg-nav-item:hover{background:rgba(99,102,241,.08);}
+.kg-nav-icon{font-size:1.3rem;}
+
+/* ── NEW v15: PROGRESS BAR (top) ── */
+#krish-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--kg-primary),var(--kg-secondary));z-index:9999;transition:width .4s ease;border-radius:0 2px 2px 0;}
+
+/* ── NEW v15: NOTES FEATURE ── */
+.kg-note-area{width:100%;min-height:60px;padding:10px 14px;font-size:.82rem;background:var(--kg-input);border:1.5px solid var(--kg-border);border-radius:10px;color:var(--kg-text);font-family:var(--font);resize:none;outline:none;margin-top:6px;transition:border-color .2s;}
+.kg-note-area:focus{border-color:var(--kg-primary);}
+.kg-note-saved{font-size:.7rem;color:var(--kg-green);margin-top:4px;opacity:0;transition:opacity .3s;}
+
+/* ── NEW v15: SESSION TAG ── */
+.kg-session-tag{display:inline-block;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:6px;background:rgba(99,102,241,.12);color:var(--kg-primary);margin-left:4px;vertical-align:middle;}
 </style>
 </head>
 <body>
+<div id="krish-progress"></div>
 <canvas id="krish-confetti"></canvas>
 
 <!-- TOP STICKY BAR -->
-<a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" id="krish-topbar">
+<a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" id="krish-topbar" data-kg-refer="true">
   <div class="kg-tb-dot"></div>
   <div class="kg-tb-text">🎁 Download PePlus &amp; Get <span>₹10 BONUS</span> — Recharge pe upto 7% bachao!</div>
   <div class="kg-tb-btn">GET NOW ↗</div>
@@ -200,7 +234,7 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
     <div style="font-size:2.8rem;margin-bottom:8px;">👨‍💻</div>
     <h3 style="color:var(--kg-primary);font-weight:800;font-size:1.2rem;">Krishana Gupta</h3>
     <div style="background:rgba(99,102,241,.1);color:var(--kg-primary);display:inline-block;padding:3px 12px;border-radius:50px;font-size:.67rem;font-weight:700;margin:8px 0 14px;letter-spacing:1px;">CSE DEVELOPER • TECH EXPERT</div>
-    <p style="color:var(--kg-muted);font-size:.87rem;line-height:1.65;">Welcome to <b>ResultX Ultimate</b>.<br>Designed for speed, performance &amp; every BTEUP student. 🚀</p>
+    <p style="color:var(--kg-muted);font-size:.87rem;line-height:1.65;">Welcome to <b>ResultX v15 Ultimate</b>.<br>Designed for every BTEUP student. 🚀</p>
     <button class="kg-modal-btn" onclick="initKrishanaCloseWelcome()">Start Checking 🚀</button>
   </div>
 </div>
@@ -225,11 +259,27 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
 <!-- MAIN CONTAINER -->
 <div id="krish-container">
 
+  <!-- STATS STRIP (NEW v15) -->
+  <div class="kg-stats-strip">
+    <div class="kg-stat-box">
+      <div class="kg-stat-num" id="krish-stat-total">0</div>
+      <div class="kg-stat-lbl">Total Checks</div>
+    </div>
+    <div class="kg-stat-box">
+      <div class="kg-stat-num" id="krish-stat-saved">0</div>
+      <div class="kg-stat-lbl">Saved</div>
+    </div>
+    <div class="kg-stat-box">
+      <div class="kg-stat-num" id="krish-stat-pinned">0</div>
+      <div class="kg-stat-lbl">Pinned ⭐</div>
+    </div>
+  </div>
+
   <!-- FORM CARD -->
   <div class="kg-card">
     <div class="kg-header">
       <div>
-        <div class="kg-brand-title">ResultX <span style="font-size:.4em;color:var(--kg-primary);border:1px solid var(--kg-primary);padding:2px 6px;border-radius:6px;vertical-align:middle;">PRO</span></div>
+        <div class="kg-brand-title">ResultX <span style="font-size:.4em;color:var(--kg-primary);border:1px solid var(--kg-primary);padding:2px 6px;border-radius:6px;vertical-align:middle;">v15</span></div>
         <div class="kg-brand-sub" id="krish-brand-sub">ODD SEMESTER EDITION</div>
       </div>
       <div class="kg-controls">
@@ -242,6 +292,7 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
       <div class="kg-clock" id="krish-clock">00:00:00</div>
     </div>
 
+    <!-- SESSION SELECT -->
     <div class="kg-input-group">
       <div class="kg-label">Exam Session</div>
       <select id="krish-session" class="kg-input" onchange="initKrishanaSessionChange()">
@@ -253,11 +304,13 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
     </div>
     <div id="krish-session-note" style="margin-top:-0.8rem;margin-bottom:1rem;font-size:0.75rem;color:var(--kg-muted);padding:0 4px;"></div>
 
+    <!-- ENROLLMENT -->
     <div class="kg-input-group">
       <div class="kg-label">Enrollment Number</div>
       <input type="text" id="krish-enrollment" class="kg-input" placeholder="E.g. E254806..." autocomplete="off" maxlength="15">
     </div>
 
+    <!-- DOB -->
     <div class="kg-input-group">
       <div class="kg-label">
         Date of Birth
@@ -265,6 +318,12 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
       </div>
       <input type="text" id="krish-dob-manual" class="kg-input" placeholder="DD/MM/YYYY" maxlength="10">
       <input type="date" id="krish-dob-picker" class="kg-input" style="display:none;margin-top:10px;">
+    </div>
+
+    <!-- NICK NAME (NEW v15 Feature 1) -->
+    <div class="kg-input-group">
+      <div class="kg-label">Nick Name (Optional) <span style="font-size:.65rem;color:var(--kg-muted);font-weight:400;">History me naam dikhega</span></div>
+      <input type="text" id="krish-nickname" class="kg-input" placeholder="E.g. Rahul, Roll No 12..." maxlength="20">
     </div>
 
     <button class="kg-btn" onclick="initKrishanaProcess()">
@@ -287,25 +346,41 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
       </a>
     </div>
 
-    <!-- HISTORY -->
+    <!-- ── HISTORY v15 (HIDDEN BY DEFAULT) ── -->
     <div class="kg-history" id="krish-history-panel" style="display:none;">
-      <div class="kg-hist-title">
-        <span>Recent Searches</span>
-        <button class="kg-clear-btn" onclick="initKrishanaClearHistory()">Clear All</button>
+      <div class="kg-hist-header" onclick="initKrishanaToggleHistoryBody()">
+        <div class="kg-hist-toggle-row">
+          <span class="kg-hist-icon">📂</span>
+          <span class="kg-hist-label">History</span>
+          <span class="kg-hist-count" id="krish-hist-count">0</span>
+        </div>
+        <div class="kg-hist-actions" onclick="event.stopPropagation()">
+          <button class="kg-export-btn" onclick="initKrishanaExportCSV()">⬇ Export</button>
+          <button class="kg-clear-btn" onclick="initKrishanaClearHistory()">🗑 Clear</button>
+          <button class="kg-hist-toggle-btn" id="krish-hist-toggle-btn">👁 Show</button>
+        </div>
       </div>
-      <div class="kg-hist-list" id="krish-history-list"></div>
+      <!-- BODY (hidden by default) -->
+      <div id="krish-history-body">
+        <!-- Search bar (NEW v15 Feature 2) -->
+        <input type="text" class="kg-hist-search" id="krish-hist-search" placeholder="🔍 Search by enrollment or name..." oninput="initKrishanaSearchHistory(this.value)">
+        <div class="kg-hist-list" id="krish-history-list"></div>
+        <div class="kg-hist-footer">
+          <span id="krish-hist-showing">0 entries</span>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- PEPLUS REFERRAL CARD -->
-  <a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" class="kg-pep-card">
+  <a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" class="kg-pep-card" data-kg-refer="true">
     <div class="kg-pep-inner">
       <div class="kg-pep-badge"><span class="kg-fire">🔥</span> LIMITED OFFER • STUDENTS ONLY</div>
       <div class="kg-pep-timer">
         <div class="kg-timer-lbl">⏰ Offer ends in</div>
         <div class="kg-timer-num" id="krish-offer-timer">09:59</div>
       </div>
-      <div class="kg-pep-h">Earn <span class="kg-gold">₹10 Instantly</span><br>Just By Downloading! 💰</div>
+      <div class="kg-pep-h">Earn <span class="kg-gold-text">₹10 Instantly</span><br>Just By Downloading! 💰</div>
       <div class="kg-pep-sub">PePlus App download karo aur pehle recharge pe <strong>upto 7% cashback</strong> pao. Mobile, DTH, Bijli Bill sab pe paisa bachao!</div>
       <div class="kg-chips">
         <div class="kg-chip">📱 Mobile Recharge</div>
@@ -328,9 +403,309 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
     </div>
     <br>
     <a href="https://youtube.com/@new2ushorts" target="_blank" class="kg-yt-link">▶ YouTube: @new2ushorts</a>
-    <p class="kg-disc">© <span id="krish-year"></span> ResultX Ultimate v14.0 — Proprietary. All Rights Reserved.<br>For educational purposes. Not affiliated with BTEUP directly.</p>
+    <p class="kg-disc">© <span id="krish-year"></span> ResultX Ultimate v15.0 — Proprietary. All Rights Reserved.<br>For educational purposes. Not affiliated with BTEUP directly.</p>
   </div>
 
+</div>
+
+<!-- BOTTOM NAV (NEW v15 Feature 3) -->
+<div id="krish-bottom-nav">
+  <div class="kg-nav-item active" onclick="initKrishanaNavHome()">
+    <span class="kg-nav-icon">🏠</span>Home
+  </div>
+  <div class="kg-nav-item" onclick="initKrishanaNavHistory()">
+    <span class="kg-nav-icon">📂</span>History
+  </div>
+  <div class="kg-nav-item" onclick="initKrishanaNavStats()">
+    <span class="kg-nav-icon">📊</span>Stats
+  </div>
+  <div class="kg-nav-item" onclick="document.getElementById('krish-hacker-modal').classList.add('active')">
+    <span class="kg-nav-icon">👤</span>Dev
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ADMIN PANEL — PRODUCTION LEVEL v15
+     Access: Footer badge 7x tap
+     ══════════════════════════════════════════ -->
+<style>
+/* ADMIN PANEL STYLES */
+#krish-admin-modal .kg-modal{max-width:420px;padding:0;overflow:hidden;border-radius:20px;}
+.kg-adm-header{background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;}
+.kg-adm-header-info{display:flex;align-items:center;gap:10px;}
+.kg-adm-avatar{width:36px;height:36px;background:linear-gradient(135deg,#6366f1,#ec4899);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:#fff;}
+.kg-adm-title{font-size:.95rem;font-weight:800;color:#fff;line-height:1.1;}
+.kg-adm-subtitle{font-size:.6rem;color:rgba(255,255,255,.5);letter-spacing:1px;margin-top:1px;}
+.kg-adm-close-btn{background:rgba(255,255,255,.08);border:none;color:rgba(255,255,255,.6);width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;}
+/* Tabs */
+.kg-adm-tabs{display:flex;background:var(--kg-input);border-bottom:1px solid var(--kg-border);overflow-x:auto;}
+.kg-adm-tab{flex:1;padding:10px 6px;font-size:.65rem;font-weight:700;color:var(--kg-muted);text-align:center;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;letter-spacing:.3px;text-transform:uppercase;}
+.kg-adm-tab.active{color:var(--kg-primary);border-bottom-color:var(--kg-primary);background:rgba(99,102,241,.05);}
+/* Tab panels */
+.kg-adm-body{padding:16px;max-height:55vh;overflow-y:auto;}
+.kg-adm-panel{display:none;}
+.kg-adm-panel.active{display:block;}
+/* Section blocks */
+.kg-adm-section{background:var(--kg-input);border-radius:12px;padding:12px;margin-bottom:10px;border:1px solid var(--kg-border);}
+.kg-adm-sec-title{font-size:.65rem;font-weight:800;color:var(--kg-primary);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.kg-adm-lbl{font-size:.68rem;color:var(--kg-muted);margin-bottom:3px;font-weight:600;}
+.kg-adm-input{width:100%;padding:9px 12px;font-size:.78rem;background:var(--kg-card);border:1.5px solid var(--kg-border);border-radius:9px;color:var(--kg-text);font-family:var(--mono);outline:none;margin-bottom:7px;transition:border-color .2s;}
+.kg-adm-input:focus{border-color:var(--kg-primary);}
+.kg-adm-btn{border:none;padding:9px 14px;border-radius:9px;font-size:.75rem;font-weight:700;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:center;gap:5px;transition:opacity .2s;}
+.kg-adm-btn:hover{opacity:.85;}
+.kg-adm-btn-primary{background:var(--kg-primary);color:#fff;}
+.kg-adm-btn-green{background:var(--kg-green);color:#fff;}
+.kg-adm-btn-purple{background:#8b5cf6;color:#fff;}
+.kg-adm-btn-red{background:rgba(239,68,68,.1);color:var(--kg-red);border:1px solid rgba(239,68,68,.25)!important;}
+.kg-adm-btn-gold{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#000;}
+.kg-adm-btn-sm{padding:6px 10px;font-size:.68rem;width:auto;}
+.kg-adm-row{display:flex;gap:6px;margin-bottom:7px;}
+.kg-adm-row .kg-adm-input{margin-bottom:0;flex:1;}
+/* Toggle switch */
+.kg-adm-toggle-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--kg-border);}
+.kg-adm-toggle-row:last-child{border-bottom:none;}
+.kg-adm-toggle-lbl{font-size:.77rem;font-weight:600;color:var(--kg-text);}
+.kg-adm-toggle-sub{font-size:.65rem;color:var(--kg-muted);}
+.kg-adm-switch{position:relative;width:40px;height:22px;flex-shrink:0;}
+.kg-adm-switch input{opacity:0;width:0;height:0;}
+.kg-adm-slider{position:absolute;cursor:pointer;inset:0;background:#cbd5e1;border-radius:22px;transition:.3s;}
+.kg-adm-slider:before{position:absolute;content:'';height:16px;width:16px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;}
+input:checked+.kg-adm-slider{background:var(--kg-primary);}
+input:checked+.kg-adm-slider:before{transform:translateX(18px);}
+/* Stats grid in admin */
+.kg-adm-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;}
+.kg-adm-stat{background:var(--kg-card);border-radius:10px;padding:12px;text-align:center;border:1px solid var(--kg-border);}
+.kg-adm-stat-n{font-family:var(--mono);font-size:1.4rem;font-weight:800;color:var(--kg-primary);}
+.kg-adm-stat-l{font-size:.6rem;color:var(--kg-muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+/* Session status badges */
+.kg-adm-status-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--kg-border);}
+.kg-adm-status-row:last-child{border-bottom:none;}
+.kg-adm-status-name{font-size:.77rem;font-weight:600;color:var(--kg-text);}
+.kg-adm-badge{font-size:.6rem;font-weight:700;padding:2px 8px;border-radius:20px;cursor:pointer;}
+.kg-adm-badge-green{background:rgba(16,185,129,.12);color:var(--kg-green);border:1px solid rgba(16,185,129,.3);}
+.kg-adm-badge-red{background:rgba(239,68,68,.1);color:var(--kg-red);border:1px solid rgba(239,68,68,.25);}
+.kg-adm-badge-gold{background:rgba(245,158,11,.1);color:var(--kg-gold);border:1px solid rgba(245,158,11,.3);}
+/* Save msg */
+#krish-admin-save-msg{text-align:center;color:var(--kg-green);font-size:.75rem;font-weight:700;display:none;padding:6px;background:rgba(16,185,129,.08);border-radius:8px;margin-top:6px;}
+/* Login screen */
+#krish-admin-login{padding:24px;}
+/* Lockout timer */
+#krish-adm-lockout{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:10px;padding:10px;text-align:center;font-size:.78rem;color:var(--kg-red);font-weight:600;display:none;margin-top:8px;}
+/* Log entries */
+.kg-adm-log{font-size:.7rem;color:var(--kg-muted);padding:5px 0;border-bottom:1px solid var(--kg-border);display:flex;justify-content:space-between;}
+.kg-adm-log:last-child{border-bottom:none;}
+.kg-adm-log-time{font-family:var(--mono);color:var(--kg-primary);font-size:.65rem;}
+/* Maintenance mode overlay */
+#krish-maintenance-overlay{display:none;position:fixed;inset:0;background:rgba(10,0,21,.97);z-index:99999;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+#krish-maintenance-overlay.on{display:flex;}
+</style>
+
+<!-- MAINTENANCE MODE OVERLAY -->
+<div id="krish-maintenance-overlay">
+  <div style="font-size:3rem;margin-bottom:16px;">🔧</div>
+  <div style="font-family:'Rajdhani',sans-serif;font-size:2rem;font-weight:800;color:#fff;margin-bottom:8px;">Under Maintenance</div>
+  <div style="color:rgba(255,255,255,.6);font-size:.9rem;max-width:280px;line-height:1.6;" id="krish-maintenance-msg">Website maintenance mode mein hai. Thodi der mein wapas aayein.</div>
+  <div style="margin-top:20px;color:#6366f1;font-size:.75rem;">— Krishana Gupta</div>
+</div>
+
+<div class="kg-overlay" id="krish-admin-modal">
+  <div class="kg-modal">
+    <!-- ── LOGIN SCREEN ── -->
+    <div id="krish-admin-login">
+      <div style="font-size:2.2rem;margin-bottom:8px;">🔐</div>
+      <h3 style="color:var(--kg-primary);font-weight:800;font-size:1.1rem;margin-bottom:4px;">Admin Panel</h3>
+      <div style="font-size:.65rem;color:var(--kg-muted);margin-bottom:16px;letter-spacing:1px;">KRISHANA GUPTA — AUTHORIZED ONLY</div>
+      <input type="password" id="krish-admin-pass-input" class="kg-input" placeholder="Enter Admin Password" style="text-align:center;letter-spacing:3px;margin-bottom:10px;" onkeydown="if(event.key==='Enter')initKrishanaAdminLogin()">
+      <button class="kg-modal-btn" style="width:100%;margin-top:0;" onclick="initKrishanaAdminLogin()">🔓 Login</button>
+      <div id="krish-admin-err" style="color:var(--kg-red);font-size:.75rem;margin-top:8px;display:none;">❌ Wrong Password! <span id="krish-adm-attempts"></span></div>
+      <div id="krish-adm-lockout">🔒 Too many attempts. Wait <span id="krish-adm-countdown">30</span>s</div>
+      <button style="background:none;border:none;color:var(--kg-muted);font-size:.75rem;cursor:pointer;margin-top:10px;" onclick="initKrishanaCloseAdmin()">Cancel</button>
+    </div>
+
+    <!-- ── ADMIN DASHBOARD ── -->
+    <div id="krish-admin-dashboard" style="display:none;">
+      <!-- Header -->
+      <div class="kg-adm-header">
+        <div class="kg-adm-header-info">
+          <div class="kg-adm-avatar">K</div>
+          <div>
+            <div class="kg-adm-title">⚙️ Admin Panel</div>
+            <div class="kg-adm-subtitle">KRISHANA GUPTA • v15.0</div>
+          </div>
+        </div>
+        <button class="kg-adm-close-btn" onclick="initKrishanaAdminLogout()">✕</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="kg-adm-tabs">
+        <div class="kg-adm-tab active" onclick="initKrishanaAdmTab('overview',this)">📊 Overview</div>
+        <div class="kg-adm-tab" onclick="initKrishanaAdmTab('links',this)">🔗 Links</div>
+        <div class="kg-adm-tab" onclick="initKrishanaAdmTab('sessions',this)">📋 Sessions</div>
+        <div class="kg-adm-tab" onclick="initKrishanaAdmTab('banner',this)">📢 Banner</div>
+        <div class="kg-adm-tab" onclick="initKrishanaAdmTab('settings',this)">⚙️ Settings</div>
+        <div class="kg-adm-tab" onclick="initKrishanaAdmTab('logs',this)">🗒️ Logs</div>
+      </div>
+
+      <div class="kg-adm-body">
+
+        <!-- TAB: OVERVIEW -->
+        <div class="kg-adm-panel active" id="krish-adm-panel-overview">
+          <div class="kg-adm-stats">
+            <div class="kg-adm-stat"><div class="kg-adm-stat-n" id="kadm-total">0</div><div class="kg-adm-stat-l">Total Checks</div></div>
+            <div class="kg-adm-stat"><div class="kg-adm-stat-n" id="kadm-saved">0</div><div class="kg-adm-stat-l">Saved History</div></div>
+            <div class="kg-adm-stat"><div class="kg-adm-stat-n" id="kadm-pinned">0</div><div class="kg-adm-stat-l">Pinned ⭐</div></div>
+            <div class="kg-adm-stat"><div class="kg-adm-stat-n" id="kadm-sessions-used">0</div><div class="kg-adm-stat-l">Sessions Used</div></div>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🕐 Last Activity</div>
+            <div style="font-size:.75rem;color:var(--kg-muted);" id="kadm-last-activity">No data yet.</div>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">💾 Storage Used</div>
+            <div style="font-size:.75rem;color:var(--kg-muted);" id="kadm-storage">Calculating...</div>
+          </div>
+          <button class="kg-adm-btn kg-adm-btn-gold" onclick="initKrishanaExportCSV();kgToast('📥 Exported!')">📥 Export All History CSV</button>
+        </div>
+
+        <!-- TAB: LINKS -->
+        <div class="kg-adm-panel" id="krish-adm-panel-links">
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">💰 PePlus Referral Link</div>
+            <div class="kg-adm-lbl">Current Refer Link</div>
+            <input type="text" id="krish-admin-refer" class="kg-adm-input" placeholder="https://peplus.in/refer.php?code=...">
+            <button class="kg-adm-btn kg-adm-btn-primary" onclick="initKrishanaAdminSaveRefer()">💾 Save & Apply Live</button>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🔗 Change Password</div>
+            <div class="kg-adm-lbl">New Password</div>
+            <input type="password" id="krish-adm-new-pass" class="kg-adm-input" placeholder="New password...">
+            <div class="kg-adm-lbl">Confirm Password</div>
+            <input type="password" id="krish-adm-confirm-pass" class="kg-adm-input" placeholder="Confirm new password...">
+            <button class="kg-adm-btn kg-adm-btn-purple" onclick="initKrishanaAdminChangePass()">🔑 Update Password</button>
+          </div>
+        </div>
+
+        <!-- TAB: SESSIONS -->
+        <div class="kg-adm-panel" id="krish-adm-panel-sessions">
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🟢 Session Status Control</div>
+            <div class="kg-adm-status-row">
+              <div><div class="kg-adm-status-name">Odd Semester</div><div style="font-size:.62rem;color:var(--kg-muted);">Main result session</div></div>
+              <span class="kg-adm-badge kg-adm-badge-green" id="kadm-status-odd" onclick="initKrishanaAdmToggleSession('odd')">LIVE</span>
+            </div>
+            <div class="kg-adm-status-row">
+              <div><div class="kg-adm-status-name">Pharmacy Result</div><div style="font-size:.62rem;color:var(--kg-muted);">Pharmacy students</div></div>
+              <span class="kg-adm-badge kg-adm-badge-green" id="kadm-status-pharmacy" onclick="initKrishanaAdmToggleSession('pharmacy')">LIVE</span>
+            </div>
+            <div class="kg-adm-status-row">
+              <div><div class="kg-adm-status-name">Re-Evaluation</div><div style="font-size:.62rem;color:var(--kg-muted);">Scrutiny portal</div></div>
+              <span class="kg-adm-badge kg-adm-badge-green" id="kadm-status-reval" onclick="initKrishanaAdmToggleSession('reval')">LIVE</span>
+            </div>
+            <div class="kg-adm-status-row">
+              <div><div class="kg-adm-status-name">Even Semester</div><div style="font-size:.62rem;color:var(--kg-muted);">Upcoming session</div></div>
+              <span class="kg-adm-badge kg-adm-badge-red" id="kadm-status-even" onclick="initKrishanaAdmToggleSession('even')">LOCKED</span>
+            </div>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🔗 BTEUP Result URLs</div>
+            <div class="kg-adm-lbl">Odd Semester URL</div>
+            <input type="text" id="krish-admin-url-odd" class="kg-adm-input" placeholder="https://result.bteexam.com/Odd_Semester/...">
+            <div class="kg-adm-lbl">Pharmacy URL</div>
+            <input type="text" id="krish-admin-url-pharmacy" class="kg-adm-input" placeholder="https://result.bteexam.com/Pharmacy/...">
+            <div class="kg-adm-lbl">Re-Evaluation URL</div>
+            <input type="text" id="krish-admin-url-reval" class="kg-adm-input" placeholder="https://result.bteexam.com/ReEvaluation/...">
+            <div class="kg-adm-lbl">Even Semester URL (for when unlocked)</div>
+            <input type="text" id="krish-admin-url-even" class="kg-adm-input" placeholder="https://result.bteexam.com/Even_Semester/...">
+            <button class="kg-adm-btn kg-adm-btn-green" onclick="initKrishanaAdminSaveURLs()">💾 Save All URLs</button>
+          </div>
+        </div>
+
+        <!-- TAB: BANNER -->
+        <div class="kg-adm-panel" id="krish-adm-panel-banner">
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">📢 Top Banner</div>
+            <div class="kg-adm-lbl">Banner Text (supports HTML)</div>
+            <input type="text" id="krish-admin-topbar-text" class="kg-adm-input" placeholder="🎁 Download PePlus...">
+            <div class="kg-adm-lbl">Button Label</div>
+            <input type="text" id="krish-admin-topbar-btn" class="kg-adm-input" placeholder="GET NOW ↗">
+            <button class="kg-adm-btn kg-adm-btn-purple" onclick="initKrishanaAdminSaveTopbar()" style="margin-bottom:7px;">📢 Save Banner</button>
+            <button class="kg-adm-btn kg-adm-btn-sm" style="background:rgba(239,68,68,.1);color:var(--kg-red);border:1px solid rgba(239,68,68,.2);width:auto;" onclick="initKrishanaAdmResetBanner()">Reset to Default</button>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">📣 Announcement Modal</div>
+            <div class="kg-adm-lbl">Announcement Text</div>
+            <input type="text" id="krish-adm-announce-text" class="kg-adm-input" placeholder="Important notice for students...">
+            <div class="kg-adm-lbl">Show on every visit?</div>
+            <div class="kg-adm-toggle-row" style="border:none;padding:0;margin-bottom:7px;">
+              <span style="font-size:.75rem;color:var(--kg-text);">Show announcement popup</span>
+              <label class="kg-adm-switch"><input type="checkbox" id="krish-adm-announce-toggle"><span class="kg-adm-slider"></span></label>
+            </div>
+            <button class="kg-adm-btn kg-adm-btn-gold" onclick="initKrishanaAdmSaveAnnouncement()">📣 Save Announcement</button>
+          </div>
+        </div>
+
+        <!-- TAB: SETTINGS -->
+        <div class="kg-adm-panel" id="krish-adm-panel-settings">
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">⚙️ App Controls</div>
+            <div class="kg-adm-toggle-row">
+              <div><div class="kg-adm-toggle-lbl">🔧 Maintenance Mode</div><div class="kg-adm-toggle-sub">Disable app for users</div></div>
+              <label class="kg-adm-switch"><input type="checkbox" id="krish-adm-maintenance" onchange="initKrishanaAdmMaintenance(this.checked)"><span class="kg-adm-slider"></span></label>
+            </div>
+            <div class="kg-adm-toggle-row">
+              <div><div class="kg-adm-toggle-lbl">🎆 Confetti on Result</div><div class="kg-adm-toggle-sub">Animation on link gen</div></div>
+              <label class="kg-adm-switch"><input type="checkbox" id="krish-adm-confetti" checked><span class="kg-adm-slider"></span></label>
+            </div>
+            <div class="kg-adm-toggle-row">
+              <div><div class="kg-adm-toggle-lbl">💬 PePlus Popup</div><div class="kg-adm-toggle-sub">Auto floating popup</div></div>
+              <label class="kg-adm-switch"><input type="checkbox" id="krish-adm-popup" checked><span class="kg-adm-slider"></span></label>
+            </div>
+            <div class="kg-adm-toggle-row">
+              <div><div class="kg-adm-toggle-lbl">👋 Welcome Modal</div><div class="kg-adm-toggle-sub">Show on first visit</div></div>
+              <label class="kg-adm-switch"><input type="checkbox" id="krish-adm-welcome" checked><span class="kg-adm-slider"></span></label>
+            </div>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-lbl">Maintenance Message</div>
+            <input type="text" id="krish-adm-maint-msg" class="kg-adm-input" placeholder="Thodi der mein wapas aayein...">
+            <button class="kg-adm-btn kg-adm-btn-primary" onclick="initKrishanaAdmSaveSettings()" style="margin-bottom:6px;">💾 Save Settings</button>
+            <button class="kg-adm-btn kg-adm-btn-red" onclick="initKrishanaAdmResetAllSettings()">⚠️ Reset All App Settings</button>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🗑️ Data Management</div>
+            <button class="kg-adm-btn kg-adm-btn-red" style="margin-bottom:6px;" onclick="initKrishanaAdmClearHistory()">🗑️ Clear All User History</button>
+            <button class="kg-adm-btn kg-adm-btn-red" onclick="initKrishanaAdmNukeAll()">💥 Factory Reset (Delete Everything)</button>
+          </div>
+        </div>
+
+        <!-- TAB: LOGS -->
+        <div class="kg-adm-panel" id="krish-adm-panel-logs">
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title" style="justify-content:space-between;">🗒️ Action Logs <button class="kg-adm-btn kg-adm-btn-sm kg-adm-btn-red" style="width:auto;padding:3px 8px;" onclick="initKrishanaAdmClearLogs()">Clear</button></div>
+            <div id="krish-adm-log-list" style="max-height:180px;overflow-y:auto;">
+              <div style="font-size:.72rem;color:var(--kg-muted);text-align:center;padding:12px;">No logs yet.</div>
+            </div>
+          </div>
+          <div class="kg-adm-section">
+            <div class="kg-adm-sec-title">🔐 Security</div>
+            <div style="font-size:.72rem;color:var(--kg-muted);line-height:1.6;">
+              Admin panel: <b style="color:var(--kg-text);">Footer 7x tap</b><br>
+              Password: Obfuscated in JS<br>
+              Lockout: <b style="color:var(--kg-text);">3 wrong attempts = 30s lock</b><br>
+              Session: <b style="color:var(--kg-text);">Auto logout on close</b>
+            </div>
+          </div>
+        </div>
+
+        <div id="krish-admin-save-msg">✅ Saved Successfully!</div>
+      </div>
+
+      <!-- Footer -->
+      <div style="padding:10px 16px;border-top:1px solid var(--kg-border);display:flex;gap:6px;">
+        <button class="kg-adm-btn kg-adm-btn-red" onclick="initKrishanaAdminLogout()" style="flex:1;">🔒 Logout</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- FLOATING POPUP -->
@@ -344,7 +719,7 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
       </div>
     </div>
     <div class="kg-popup-desc">PePlus — India ka sasta recharge app. Mobile, DTH, Bijli sab pe <strong style="color:#ffd700">upto 7% bachao</strong>. Student-friendly! 🎓</div>
-    <a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" class="kg-popup-btn">🚀 GET ₹10 FREE — Download Now</a>
+    <a href="https://peplus.in/refer.php?code=SJL844031" target="_blank" class="kg-popup-btn" data-kg-refer="true">🚀 GET ₹10 FREE — Download Now</a>
   </div>
 </div>
 
@@ -355,50 +730,75 @@ select.kg-input{appearance:none;background-image:url("data:image/svg+xml;charset
   Proprietary Code. 100% Owned by Krishana Gupta.
   Unauthorized copying, modification, or distribution is strictly prohibited.
   YouTube: @new2ushorts
-
+  Version: 15.0
   DNA: S3Jpc2hhbmEgR3VwdGE= (Base64)
 */
 
-// Console ASCII Art
-console.log('%c' + `
-██╗  ██╗██████╗ ██╗███████╗██╗  ██╗ █████╗ ███╗  ██╗ █████╗      ██████╗ ██╗   ██╗██████╗ ████████╗ █████╗
-██║ ██╔╝██╔══██╗██║██╔════╝██║  ██║██╔══██╗████╗ ██║██╔══██╗    ██╔════╝ ██║   ██║██╔══██╗╚══██╔══╝██╔══██╗
-█████╔╝ ██████╔╝██║███████╗███████║███████║██╔██╗██║███████║    ██║  ███╗██║   ██║██████╔╝   ██║   ███████║
-██╔═██╗ ██╔══██╗██║╚════██║██╔══██║██╔══██║██║╚████║██╔══██║    ██║   ██║██║   ██║██╔═══╝    ██║   ██╔══██║
-██║  ██╗██║  ██║██║███████║██║  ██║██║  ██║██║ ╚███║██║  ██║    ╚██████╔╝╚██████╔╝██║        ██║   ██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚══╝╚═╝  ╚═╝     ╚═════╝  ╚═════╝ ╚═╝        ╚═╝   ╚═╝  ╚═╝
-`, 'color:#00ff88;font-size:9px;background:#050010;padding:12px;font-weight:bold;');
-console.log('%c⚠️ PROPRIETARY CODE — 100% OWNED BY KRISHANA GUPTA', 'color:#ffd700;font-size:13px;font-weight:bold;');
-console.log('%c   YouTube: @new2ushorts  |  Unauthorized copying is prohibited.', 'color:#ff4444;font-size:11px;');
+// Console Signature (Fixed - no raw unicode blocks that break mobile consoles)
+console.log('%c ResultX v15 — KRISHANA GUPTA ', 'color:#00ff88;font-size:16px;font-weight:900;background:#050010;padding:10px 20px;border-radius:6px;letter-spacing:2px;');
+console.log('%c⚠️ PROPRIETARY CODE — 100% OWNED BY KRISHANA GUPTA | v15.0', 'color:#ffd700;font-size:13px;font-weight:bold;');
+console.log('%c YouTube: @new2ushorts  |  Unauthorized copying is prohibited.', 'color:#ff4444;font-size:11px;');
 
 // ── GLOBAL STATE ──
 let kgIsManual = true, kgSound = true, kgFooterTaps = 0, kgKeyBuf = '', kgOfferSecs = 599;
+let kgHistOpen = false; // history hidden by default
+
+// ── STORAGE KEY v15 ──
+const KG_HIST_KEY = 'krish_hist_v15';
+const KG_STATS_KEY = 'krish_stats_v15';
+
+// ── SESSION URL MAP ──
+const kgSessionMap = {
+  'odd':      { url: 'https://result.bteexam.com/Odd_Semester/main/result.aspx',  label: 'Odd Semester' },
+  'pharmacy': { url: 'https://result.bteexam.com/Pharmacy/main/result.aspx',      label: 'Pharmacy Result' },
+  'reval':    { url: 'https://result.bteexam.com/ReEvaluation/main/result.aspx',  label: 'Re-Evaluation / Scrutiny' },
+  'even':     { url: null, label: 'Even Semester' },
+};
 
 // ── INIT ──
 window.onload = function() {
+  initKrishanaApplyAdminCfg();
   document.getElementById('krish-year').textContent = new Date().getFullYear();
   initKrishanaRenderHistory();
+  initKrishanaUpdateStats();
   initKrishanaSessionChange();
   setInterval(() => { document.getElementById('krish-clock').innerText = new Date().toLocaleTimeString(); }, 1000);
   setInterval(() => {
     const m = String(Math.floor(kgOfferSecs/60)).padStart(2,'0');
     const s = String(kgOfferSecs%60).padStart(2,'0');
     document.getElementById('krish-offer-timer').textContent = m+':'+s;
-    if (kgOfferSecs>0) kgOfferSecs--; else kgOfferSecs=599;
+    if(kgOfferSecs>0) kgOfferSecs--; else kgOfferSecs=599;
   }, 1000);
-  if (!sessionStorage.getItem('krish_v')) {
+  if(!sessionStorage.getItem('krish_v15')) {
     document.getElementById('krish-welcome-modal').classList.add('active');
-    sessionStorage.setItem('krish_v','1');
+    sessionStorage.setItem('krish_v15','1');
   }
-  if (localStorage.getItem('krish_theme')==='dark') {
+  if(localStorage.getItem('krish_theme')==='dark') {
     document.body.setAttribute('data-theme','dark');
     document.getElementById('krish-theme-btn').textContent='☀️';
   }
   setTimeout(()=>{
-    document.getElementById('krish-float-popup').classList.add('show');
-    setTimeout(()=>document.getElementById('krish-float-popup').classList.remove('show'),9000);
+    const cfg2 = JSON.parse(localStorage.getItem(KG_ADMIN_KEY)||'{}');
+    if(!cfg2.popupOff && !window._kgPopupDisabled){
+      document.getElementById('krish-float-popup').classList.add('show');
+      setTimeout(()=>document.getElementById('krish-float-popup').classList.remove('show'),9000);
+    }
   },7000);
 };
+
+// ── SESSION CHANGE ──
+function initKrishanaSessionChange(){
+  const sel = document.getElementById('krish-session').value;
+  const note = document.getElementById('krish-session-note');
+  const sub = document.getElementById('krish-brand-sub');
+  if(sel === 'even'){
+    note.innerHTML = '🔒 Even Semester results not yet released. Check back later.';
+    note.style.color = 'var(--kg-red)';
+  } else { note.innerHTML = ''; }
+  const labels = { odd:'ODD SEMESTER EDITION', pharmacy:'PHARMACY EDITION', reval:'RE-EVALUATION EDITION', even:'EVEN SEMESTER EDITION' };
+  sub.textContent = labels[sel] || 'BTEUP RESULT CHECKER';
+  document.getElementById('krish-result').style.display='none';
+}
 
 // ── MODALS ──
 function initKrishanaCloseWelcome(){ document.getElementById('krish-welcome-modal').classList.remove('active'); kgVib(); }
@@ -406,14 +806,374 @@ function initKrishanaCloseWelcome(){ document.getElementById('krish-welcome-moda
 // ── EASTER EGG: type "krish" ──
 document.addEventListener('keydown', function(e){
   kgKeyBuf += e.key.toLowerCase();
-  if (kgKeyBuf.length>5) kgKeyBuf=kgKeyBuf.slice(-5);
-  if (kgKeyBuf==='krish') { document.getElementById('krish-hacker-modal').classList.add('active'); kgKeyBuf=''; }
+  if(kgKeyBuf.length>5) kgKeyBuf=kgKeyBuf.slice(-5);
+  if(kgKeyBuf==='krish'){ document.getElementById('krish-hacker-modal').classList.add('active'); kgKeyBuf=''; }
 });
 
-// ── EASTER EGG: tap footer 5x ──
+// ══════════════════════════════════════════════════════
+// ── ADMIN PANEL v15 — PRODUCTION LEVEL
+// ══════════════════════════════════════════════════════
+
+const KG_ADMIN_KEY  = 'krish_admin_cfg';
+const KG_LOGS_KEY   = 'krish_admin_logs';
+let kgAdminLoggedIn = false;
+let kgAdmFailCount  = 0;
+let kgAdmLocked     = false;
+
+// Password stored as btoa — change 'kg@admin2026' to your password
+const KG_ADMIN_PASS = btoa('kg@admin2026');
+
+// ── LOGIN with brute-force lockout ──
+function initKrishanaAdminLogin(){
+  if(kgAdmLocked){ kgToast('🔒 Locked! Wait for timer.'); return; }
+  const input = document.getElementById('krish-admin-pass-input').value;
+  const err   = document.getElementById('krish-admin-err');
+  // Check custom saved password first
+  const cfg = initKrishanaAdminGetCfg();
+  const activePass = cfg.customPass || KG_ADMIN_PASS;
+  if(btoa(input) === activePass){
+    kgAdmFailCount = 0;
+    kgAdminLoggedIn = true;
+    err.style.display = 'none';
+    document.getElementById('krish-admin-login').style.display = 'none';
+    document.getElementById('krish-admin-dashboard').style.display = 'block';
+    initKrishanaAdminLoadValues();
+    initKrishanaAdmRefreshOverview();
+    initKrishanaAdmLog('Admin logged in');
+    kgToast('✅ Admin logged in!');
+  } else {
+    kgAdmFailCount++;
+    document.getElementById('krish-adm-attempts').textContent = `(${3-kgAdmFailCount} attempts left)`;
+    err.style.display = 'block';
+    document.getElementById('krish-admin-pass-input').classList.add('error');
+    setTimeout(()=>document.getElementById('krish-admin-pass-input').classList.remove('error'),500);
+    if(kgAdmFailCount >= 3){
+      kgAdmLocked = true;
+      document.getElementById('krish-adm-lockout').style.display='block';
+      let secs = 30;
+      document.getElementById('krish-adm-countdown').textContent = secs;
+      const iv = setInterval(()=>{
+        secs--;
+        document.getElementById('krish-adm-countdown').textContent = secs;
+        if(secs<=0){ clearInterval(iv); kgAdmLocked=false; kgAdmFailCount=0; document.getElementById('krish-adm-lockout').style.display='none'; err.style.display='none'; }
+      },1000);
+    }
+  }
+}
+
+function initKrishanaAdminLogout(){
+  kgAdminLoggedIn = false;
+  document.getElementById('krish-admin-login').style.display = 'block';
+  document.getElementById('krish-admin-dashboard').style.display = 'none';
+  document.getElementById('krish-admin-pass-input').value = '';
+  document.getElementById('krish-admin-modal').classList.remove('active');
+  initKrishanaAdmLog('Admin logged out');
+}
+
+function initKrishanaCloseAdmin(){
+  document.getElementById('krish-admin-modal').classList.remove('active');
+  document.getElementById('krish-admin-pass-input').value = '';
+  document.getElementById('krish-admin-err').style.display = 'none';
+}
+
+// ── TAB SWITCH ──
+function initKrishanaAdmTab(tab, el){
+  document.querySelectorAll('.kg-adm-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.kg-adm-panel').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('krish-adm-panel-'+tab).classList.add('active');
+  if(tab==='overview') initKrishanaAdmRefreshOverview();
+  if(tab==='logs') initKrishanaAdmRenderLogs();
+}
+
+// ── LOAD CONFIG INTO FIELDS ──
+function initKrishanaAdminLoadValues(){
+  const cfg = initKrishanaAdminGetCfg();
+  document.getElementById('krish-admin-refer').value         = cfg.referLink    || 'https://peplus.in/refer.php?code=SJL844031';
+  document.getElementById('krish-admin-url-odd').value      = cfg.urlOdd        || kgSessionMap.odd.url;
+  document.getElementById('krish-admin-url-pharmacy').value = cfg.urlPharmacy   || kgSessionMap.pharmacy.url;
+  document.getElementById('krish-admin-url-reval').value    = cfg.urlReval      || kgSessionMap.reval.url;
+  document.getElementById('krish-admin-url-even').value     = cfg.urlEven       || '';
+  document.getElementById('krish-admin-topbar-text').value  = cfg.topbarText    || '';
+  document.getElementById('krish-admin-topbar-btn').value   = cfg.topbarBtnText || '';
+  document.getElementById('krish-adm-announce-text').value  = cfg.announceText  || '';
+  document.getElementById('krish-adm-announce-toggle').checked = cfg.announceEnabled || false;
+  document.getElementById('krish-adm-maintenance').checked  = cfg.maintenance   || false;
+  document.getElementById('krish-adm-confetti').checked     = cfg.confettiOff   !== true;
+  document.getElementById('krish-adm-popup').checked        = cfg.popupOff      !== true;
+  document.getElementById('krish-adm-welcome').checked      = cfg.welcomeOff    !== true;
+  document.getElementById('krish-adm-maint-msg').value      = cfg.maintMsg      || '';
+  // Session status badges
+  ['odd','pharmacy','reval','even'].forEach(s=>{
+    const locked = cfg['locked_'+s];
+    const el = document.getElementById('kadm-status-'+s);
+    if(el){
+      el.textContent = locked ? 'LOCKED' : (s==='even' ? 'LOCKED' : 'LIVE');
+      el.className = 'kg-adm-badge ' + (locked || s==='even' ? 'kg-adm-badge-red' : 'kg-adm-badge-green');
+    }
+  });
+}
+
+// ── OVERVIEW REFRESH ──
+function initKrishanaAdmRefreshOverview(){
+  const hist = initKrishanaGetHistory();
+  const s    = JSON.parse(localStorage.getItem(KG_STATS_KEY)||'{"total":0}');
+  document.getElementById('kadm-total').textContent   = s.total||0;
+  document.getElementById('kadm-saved').textContent   = hist.length;
+  document.getElementById('kadm-pinned').textContent  = hist.filter(h=>h.pinned).length;
+  const sessUsed = [...new Set(hist.map(h=>h.session))].length;
+  document.getElementById('kadm-sessions-used').textContent = sessUsed||0;
+  // Last activity
+  const last = hist[0];
+  document.getElementById('kadm-last-activity').textContent = last
+    ? `${last.nickname||last.enroll} — ${last.session} — ${last.date} ${last.time||''}`
+    : 'No activity yet.';
+  // Storage estimate
+  let bytes = 0;
+  try{ Object.keys(localStorage).forEach(k=>{ bytes += (localStorage.getItem(k)||'').length*2; }); } catch(e){}
+  document.getElementById('kadm-storage').textContent = bytes > 1024 ? (bytes/1024).toFixed(1)+' KB used' : bytes+' bytes used';
+}
+
+// ── SAVE / APPLY ──
+function initKrishanaAdminGetCfg(){ return JSON.parse(localStorage.getItem(KG_ADMIN_KEY)||'{}'); }
+function initKrishanaAdminSetCfg(obj){ localStorage.setItem(KG_ADMIN_KEY, JSON.stringify(obj)); }
+
+function initKrishanaAdminShowSaved(){
+  const msg = document.getElementById('krish-admin-save-msg');
+  msg.style.display = 'block';
+  setTimeout(()=>msg.style.display='none', 2500);
+}
+
+function initKrishanaAdminSaveRefer(){
+  const val = document.getElementById('krish-admin-refer').value.trim();
+  if(!val){ kgToast('⚠️ Refer link empty!'); return; }
+  const cfg = initKrishanaAdminGetCfg();
+  cfg.referLink = val;
+  initKrishanaAdminSetCfg(cfg);
+  document.querySelectorAll('a[data-kg-refer]').forEach(a => a.href = val);
+  initKrishanaAdminShowSaved();
+  initKrishanaAdmLog('Refer link updated');
+  kgToast('💰 Refer link updated!');
+}
+
+function initKrishanaAdminSaveURLs(){
+  const cfg = initKrishanaAdminGetCfg();
+  const odd      = document.getElementById('krish-admin-url-odd').value.trim();
+  const pharmacy = document.getElementById('krish-admin-url-pharmacy').value.trim();
+  const reval    = document.getElementById('krish-admin-url-reval').value.trim();
+  const even     = document.getElementById('krish-admin-url-even').value.trim();
+  if(odd)      { cfg.urlOdd = odd;           kgSessionMap.odd.url      = odd; }
+  if(pharmacy) { cfg.urlPharmacy = pharmacy; kgSessionMap.pharmacy.url = pharmacy; }
+  if(reval)    { cfg.urlReval = reval;       kgSessionMap.reval.url    = reval; }
+  if(even)     { cfg.urlEven = even;         kgSessionMap.even.url     = even; }
+  initKrishanaAdminSetCfg(cfg);
+  initKrishanaAdminShowSaved();
+  initKrishanaAdmLog('Session URLs updated');
+  kgToast('🔗 URLs updated!');
+}
+
+function initKrishanaAdminSaveTopbar(){
+  const val    = document.getElementById('krish-admin-topbar-text').value.trim();
+  const btnVal = document.getElementById('krish-admin-topbar-btn').value.trim();
+  const cfg    = initKrishanaAdminGetCfg();
+  cfg.topbarText    = val;
+  cfg.topbarBtnText = btnVal;
+  initKrishanaAdminSetCfg(cfg);
+  if(val){ const el = document.querySelector('.kg-tb-text'); if(el) el.innerHTML = val; }
+  if(btnVal){ const el = document.querySelector('.kg-tb-btn'); if(el) el.textContent = btnVal; }
+  initKrishanaAdminShowSaved();
+  initKrishanaAdmLog('Banner updated');
+  kgToast('📢 Banner updated!');
+}
+
+function initKrishanaAdmResetBanner(){
+  const cfg = initKrishanaAdminGetCfg();
+  delete cfg.topbarText; delete cfg.topbarBtnText;
+  initKrishanaAdminSetCfg(cfg);
+  const el = document.querySelector('.kg-tb-text');
+  if(el) el.innerHTML = '🎁 Download PePlus &amp; Get <span>₹10 BONUS</span> — Recharge pe upto 7% bachao!';
+  const btn = document.querySelector('.kg-tb-btn');
+  if(btn) btn.textContent = 'GET NOW ↗';
+  document.getElementById('krish-admin-topbar-text').value = '';
+  document.getElementById('krish-admin-topbar-btn').value = '';
+  kgToast('🔄 Banner reset!');
+}
+
+function initKrishanaAdmSaveAnnouncement(){
+  const text = document.getElementById('krish-adm-announce-text').value.trim();
+  const enabled = document.getElementById('krish-adm-announce-toggle').checked;
+  const cfg = initKrishanaAdminGetCfg();
+  cfg.announceText = text; cfg.announceEnabled = enabled;
+  initKrishanaAdminSetCfg(cfg);
+  initKrishanaAdminShowSaved();
+  initKrishanaAdmLog('Announcement saved');
+  kgToast('📣 Announcement saved!');
+}
+
+// ── SESSION TOGGLE ──
+function initKrishanaAdmToggleSession(session){
+  const cfg = initKrishanaAdminGetCfg();
+  const key = 'locked_'+session;
+  cfg[key] = !cfg[key];
+  initKrishanaAdminSetCfg(cfg);
+  // Update badge
+  const el = document.getElementById('kadm-status-'+session);
+  if(el){
+    el.textContent = cfg[key] ? 'LOCKED' : 'LIVE';
+    el.className = 'kg-adm-badge ' + (cfg[key] ? 'kg-adm-badge-red' : 'kg-adm-badge-green');
+  }
+  // Update dropdown option
+  const opt = document.querySelector(`#krish-session option[value="${session}"]`);
+  if(opt){
+    if(cfg[key]){ opt.disabled=true; opt.textContent=opt.textContent.replace('🟢','🔒'); }
+    else { opt.disabled = session==='even'; opt.textContent=opt.textContent.replace('🔒','🟢'); }
+  }
+  initKrishanaAdmLog(`Session ${session} ${cfg[key]?'locked':'unlocked'}`);
+  kgToast(`${cfg[key]?'🔒 Locked':'🟢 Unlocked'}: ${session}`);
+}
+
+// ── SETTINGS SAVE ──
+function initKrishanaAdmSaveSettings(){
+  const cfg = initKrishanaAdminGetCfg();
+  cfg.confettiOff = !document.getElementById('krish-adm-confetti').checked;
+  cfg.popupOff    = !document.getElementById('krish-adm-popup').checked;
+  cfg.welcomeOff  = !document.getElementById('krish-adm-welcome').checked;
+  cfg.maintMsg    = document.getElementById('krish-adm-maint-msg').value.trim();
+  initKrishanaAdminSetCfg(cfg);
+  initKrishanaAdminShowSaved();
+  initKrishanaAdmLog('Settings saved');
+  kgToast('⚙️ Settings saved!');
+}
+
+// ── MAINTENANCE MODE ──
+function initKrishanaAdmMaintenance(on){
+  const cfg = initKrishanaAdminGetCfg();
+  cfg.maintenance = on;
+  initKrishanaAdminSetCfg(cfg);
+  const overlay = document.getElementById('krish-maintenance-overlay');
+  overlay.classList.toggle('on', on);
+  const msg = cfg.maintMsg || 'Website maintenance mode mein hai. Thodi der mein wapas aayein.';
+  document.getElementById('krish-maintenance-msg').textContent = msg;
+  initKrishanaAdmLog(on ? 'Maintenance ON' : 'Maintenance OFF');
+  kgToast(on ? '🔧 Maintenance mode ON' : '✅ Maintenance mode OFF');
+}
+
+// ── CHANGE PASSWORD ──
+function initKrishanaAdminChangePass(){
+  const np = document.getElementById('krish-adm-new-pass').value;
+  const cp = document.getElementById('krish-adm-confirm-pass').value;
+  if(!np){ kgToast('⚠️ Enter new password!'); return; }
+  if(np !== cp){ kgToast('❌ Passwords don\'t match!'); return; }
+  if(np.length < 6){ kgToast('❌ Password too short! Min 6 chars.'); return; }
+  const cfg = initKrishanaAdminGetCfg();
+  cfg.customPass = btoa(np);
+  initKrishanaAdminSetCfg(cfg);
+  document.getElementById('krish-adm-new-pass').value = '';
+  document.getElementById('krish-adm-confirm-pass').value = '';
+  initKrishanaAdmLog('Password changed');
+  kgToast('🔑 Password updated!');
+}
+
+// ── DATA MANAGEMENT ──
+function initKrishanaAdmClearHistory(){
+  if(confirm('Saari user history delete karni hai?')){
+    localStorage.removeItem(KG_HIST_KEY);
+    initKrishanaRenderHistory();
+    initKrishanaUpdateStats();
+    initKrishanaAdmLog('All history cleared by admin');
+    kgToast('🗑️ History cleared!');
+  }
+}
+function initKrishanaAdmNukeAll(){
+  if(confirm('⚠️ FACTORY RESET: Sab kuch delete ho jayega! Sure ho?')){
+    if(confirm('Bilkul sure? Yeh wapas nahi aayega!')){
+      localStorage.clear();
+      initKrishanaAdmLog('FACTORY RESET executed');
+      kgToast('💥 Factory reset done!');
+      setTimeout(()=>location.reload(), 1500);
+    }
+  }
+}
+function initKrishanaAdmResetAllSettings(){
+  if(confirm('Saari admin settings reset karni hain?')){
+    localStorage.removeItem(KG_ADMIN_KEY);
+    kgToast('🔄 Settings reset!');
+    initKrishanaAdminLogout();
+  }
+}
+
+// ── LOGS ──
+function initKrishanaAdmLog(action){
+  try{
+    let logs = JSON.parse(localStorage.getItem(KG_LOGS_KEY)||'[]');
+    logs.unshift({ action, time: new Date().toLocaleString('en-IN') });
+    if(logs.length > 50) logs = logs.slice(0,50);
+    localStorage.setItem(KG_LOGS_KEY, JSON.stringify(logs));
+  } catch(e){}
+}
+function initKrishanaAdmRenderLogs(){
+  const logs = JSON.parse(localStorage.getItem(KG_LOGS_KEY)||'[]');
+  const el   = document.getElementById('krish-adm-log-list');
+  if(!logs.length){ el.innerHTML='<div style="font-size:.72rem;color:var(--kg-muted);text-align:center;padding:12px;">No logs yet.</div>'; return; }
+  el.innerHTML = logs.map(l=>`<div class="kg-adm-log"><span>${l.action}</span><span class="kg-adm-log-time">${l.time}</span></div>`).join('');
+}
+function initKrishanaAdmClearLogs(){
+  localStorage.removeItem(KG_LOGS_KEY);
+  initKrishanaAdmRenderLogs();
+  kgToast('🗒️ Logs cleared!');
+}
+
+// Apply saved admin config on load
+function initKrishanaApplyAdminCfg(){
+  const cfg = JSON.parse(localStorage.getItem(KG_ADMIN_KEY)||'{}');
+  if(cfg.referLink){
+    document.querySelectorAll('a[data-kg-refer]').forEach(a=>a.href=cfg.referLink);
+  }
+  if(cfg.urlOdd)      kgSessionMap.odd.url      = cfg.urlOdd;
+  if(cfg.urlPharmacy) kgSessionMap.pharmacy.url = cfg.urlPharmacy;
+  if(cfg.urlReval)    kgSessionMap.reval.url    = cfg.urlReval;
+  if(cfg.urlEven && cfg.urlEven.trim()) kgSessionMap.even.url = cfg.urlEven;
+  if(cfg.topbarText){ const el=document.querySelector('.kg-tb-text'); if(el) el.innerHTML=cfg.topbarText; }
+  if(cfg.topbarBtnText){ const el=document.querySelector('.kg-tb-btn'); if(el) el.textContent=cfg.topbarBtnText; }
+  // Maintenance
+  if(cfg.maintenance){
+    const overlay = document.getElementById('krish-maintenance-overlay');
+    overlay.classList.add('on');
+    const msg = cfg.maintMsg || 'Website maintenance mode mein hai.';
+    document.getElementById('krish-maintenance-msg').textContent = msg;
+  }
+  // Popup off
+  if(cfg.popupOff){
+    // prevent popup from showing
+    window._kgPopupDisabled = true;
+  }
+  // Announcement
+  if(cfg.announceEnabled && cfg.announceText){
+    const announceSess = sessionStorage.getItem('krish_announce_shown');
+    if(!announceSess){
+      setTimeout(()=>{
+        kgToast('📣 ' + cfg.announceText.slice(0,60));
+        sessionStorage.setItem('krish_announce_shown','1');
+      }, 2000);
+    }
+  }
+  // Lock sessions from config
+  ['odd','pharmacy','reval','even'].forEach(s=>{
+    if(cfg['locked_'+s]){
+      const opt = document.querySelector(`#krish-session option[value="${s}"]`);
+      if(opt) opt.disabled = true;
+    }
+  });
+}
+
+// ── EASTER EGG: tap footer 5x → Hacker Modal, 7x → Admin Panel ──
 function initKrishanaFooterTap(){
   kgFooterTaps++;
-  if (kgFooterTaps>=5){ document.getElementById('krish-hacker-modal').classList.add('active'); kgFooterTaps=0; }
+  if(kgFooterTaps===5){ document.getElementById('krish-hacker-modal').classList.add('active'); }
+  if(kgFooterTaps>=7){ 
+    document.getElementById('krish-admin-modal').classList.add('active'); 
+    kgFooterTaps=0; 
+  }
 }
 
 // ── DOB TOGGLE ──
@@ -432,47 +1192,33 @@ document.getElementById('krish-dob-manual').addEventListener('input', function()
   else this.value=v;
 });
 
-// ── CORE LOGIC (Original Preserved) ──
+// ── PROGRESS BAR ──
+function initKrishanaShowProgress(){
+  const bar = document.getElementById('krish-progress');
+  bar.style.width='0%';
+  let p=0;
+  const iv=setInterval(()=>{ p+=Math.random()*15; if(p>85){clearInterval(iv);} bar.style.width=Math.min(p,85)+'%'; },100);
+  return function(){ bar.style.width='100%'; setTimeout(()=>bar.style.width='0%',500); clearInterval(iv); };
+}
+
+// ── CORE PROCESS ──
 function initKrishanaProcess(){
   kgVib();
   const btnText=document.getElementById('krish-btn-text'), spinner=document.getElementById('krish-spinner'), btn=document.querySelector('.kg-btn');
   btnText.style.display='none'; spinner.style.display='block'; btn.disabled=true; btn.style.opacity='.8';
-  setTimeout(()=>{ initKrishanaGenerateLink(); btnText.style.display='block'; spinner.style.display='none'; btn.disabled=false; btn.style.opacity='1'; },800);
-}
-
-// ── SESSION URL MAP ──
-const kgSessionMap = {
-  'odd':      { url: 'https://result.bteexam.com/Odd_Semester/main/result.aspx', label: 'Odd Semester' },
-  'pharmacy': { url: 'https://result.bteexam.com/Pharmacy/main/result.aspx',     label: 'Pharmacy Result' },
-  'reval':    { url: 'https://result.bteexam.com/ReEvaluation/main/result.aspx', label: 'Re-Evaluation / Scrutiny' },
-  'even':     { url: null, label: 'Even Semester' },
-};
-
-function initKrishanaSessionChange(){
-  const sel = document.getElementById('krish-session').value;
-  const note = document.getElementById('krish-session-note');
-  const sub = document.getElementById('krish-brand-sub');
-  const info = kgSessionMap[sel];
-  if(sel === 'even'){
-    note.innerHTML = '🔒 Even Semester results not yet released. Check back later.';
-    note.style.color = 'var(--kg-red)';
-  } else {
-    note.innerHTML = '';
-  }
-  const labels = { odd:'ODD SEMESTER EDITION', pharmacy:'PHARMACY EDITION', reval:'RE-EVALUATION EDITION', even:'EVEN SEMESTER EDITION' };
-  sub.textContent = labels[sel] || 'BTEUP RESULT CHECKER';
-  // hide old result on session change
-  document.getElementById('krish-result').style.display='none';
+  const doneProgress = initKrishanaShowProgress();
+  setTimeout(()=>{ initKrishanaGenerateLink(); doneProgress(); btnText.style.display='block'; spinner.style.display='none'; btn.disabled=false; btn.style.opacity='1'; },800);
 }
 
 function initKrishanaGenerateLink(){
   const enrollInput=document.getElementById('krish-enrollment');
   const enrollment=enrollInput.value.trim().toUpperCase();
   const session=document.getElementById('krish-session').value;
+  const nickname=document.getElementById('krish-nickname').value.trim();
   let formattedDOB='';
   if(!enrollment){ kgToast('⚠️ Please enter Enrollment Number!'); kgShake(enrollInput); return; }
   if(enrollment.length<5){ kgToast('❌ Enrollment number too short!'); kgShake(enrollInput); return; }
-  if(session === 'even'){ kgToast('🔒 Even Semester results not released yet!'); return; }
+  if(session==='even'){ kgToast('🔒 Even Semester results not released yet!'); return; }
   if(kgIsManual){
     const dobVal=document.getElementById('krish-dob-manual').value.trim();
     const regex=/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
@@ -483,7 +1229,7 @@ function initKrishanaGenerateLink(){
     if(!dobRaw){ kgToast('📅 Please select Date of Birth!'); return; }
     const parts=dobRaw.split('-'); formattedDOB=`${parts[2]}/${parts[1]}/${parts[0]}`;
   }
-  const sessionInfo = kgSessionMap[session];
+  const sessionInfo=kgSessionMap[session];
   const encodedID=encodeURIComponent(btoa(enrollment));
   const encodedDOB=encodeURIComponent(btoa(formattedDOB));
   const finalUrl=`${sessionInfo.url}?id=${encodedID}&id2=${encodedDOB}`;
@@ -492,38 +1238,206 @@ function initKrishanaGenerateLink(){
   document.getElementById('krish-link').value=finalUrl;
   document.getElementById('krish-open-btn').href=finalUrl;
   document.getElementById('krish-qr').src=`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(finalUrl)}`;
-  initKrishanaAddHistory(enrollment,formattedDOB);
+  initKrishanaAddHistory(enrollment, formattedDOB, session, nickname);
   initKrishanaFireConfetti();
   kgToast(`🎉 ${sessionInfo.label} Link Generated!`);
   resCard.scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-// ── HISTORY ──
-function initKrishanaAddHistory(enroll,dob){
-  let hist=JSON.parse(localStorage.getItem('krish_hist_v14'))||[];
-  hist=hist.filter(h=>h.enroll!==enroll);
-  hist.unshift({enroll,dob,date:new Date().toLocaleDateString()});
-  if(hist.length>5) hist.pop();
-  localStorage.setItem('krish_hist_v14',JSON.stringify(hist));
-  initKrishanaRenderHistory();
+// ══════════════════════════════════════════════
+// ── HISTORY v15 — UNLIMITED, HIDDEN BY DEFAULT
+// ══════════════════════════════════════════════
+
+function initKrishanaGetHistory(){
+  try{ return JSON.parse(localStorage.getItem(KG_HIST_KEY))||[]; }
+  catch(e){ return []; }
 }
-function initKrishanaRenderHistory(){
-  const hist=JSON.parse(localStorage.getItem('krish_hist_v14'))||[];
-  const panel=document.getElementById('krish-history-panel'), list=document.getElementById('krish-history-list');
+function initKrishanaSaveHistory(hist){
+  localStorage.setItem(KG_HIST_KEY, JSON.stringify(hist));
+}
+
+// Feature: Add to history — NO LIMIT
+function initKrishanaAddHistory(enroll, dob, session, nickname){
+  let hist = initKrishanaGetHistory();
+  // Remove duplicate enrollment
+  hist = hist.filter(h => h.enroll !== enroll);
+  // Add new entry at top
+  hist.unshift({
+    enroll,
+    dob,
+    session: session || 'odd',
+    nickname: nickname || '',
+    date: new Date().toLocaleDateString('en-IN'),
+    time: new Date().toLocaleTimeString('en-IN', {hour:'2-digit',minute:'2-digit'}),
+    pinned: false,
+    id: Date.now()
+  });
+  initKrishanaSaveHistory(hist);
+  // Update stats
+  initKrishanaIncrementStat();
+  initKrishanaRenderHistory();
+  initKrishanaUpdateStats();
+}
+
+// Feature: Render history list
+function initKrishanaRenderHistory(filterText){
+  let hist = initKrishanaGetHistory();
+  const panel = document.getElementById('krish-history-panel');
+  const list = document.getElementById('krish-history-list');
+  const countEl = document.getElementById('krish-hist-count');
+  const showingEl = document.getElementById('krish-hist-showing');
   if(!hist.length){ panel.style.display='none'; return; }
   panel.style.display='block';
-  list.innerHTML=hist.map(h=>`<div class="kg-hist-card" onclick="initKrishanaAutofill('${h.enroll}','${h.dob}')"><div style="display:flex;align-items:center;gap:10px;"><span style="font-size:1.1rem;">👤</span><div><div class="h-enroll">${h.enroll}</div><div class="h-date">DOB: ${h.dob}</div></div></div><div style="font-size:1.1rem;color:var(--kg-primary);">↗</div></div>`).join('');
+  // Sort: pinned first, then by date
+  hist.sort((a,b)=>(b.pinned?1:0)-(a.pinned?1:0));
+  // Filter
+  let filtered = hist;
+  if(filterText && filterText.trim()){
+    const q = filterText.toLowerCase();
+    filtered = hist.filter(h=>
+      h.enroll.toLowerCase().includes(q) ||
+      (h.nickname&&h.nickname.toLowerCase().includes(q)) ||
+      (h.dob&&h.dob.includes(q))
+    );
+  }
+  countEl.textContent = hist.length;
+  showingEl.textContent = filtered.length===hist.length ? `${hist.length} entries` : `${filtered.length} of ${hist.length} shown`;
+  const sessionLabels = {odd:'Odd',pharmacy:'Pharmacy',reval:'Reval',even:'Even'};
+  list.innerHTML = filtered.map(h=>`
+    <div class="kg-hist-card${h.pinned?' pinned':''}" id="hcard-${h.id}">
+      <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0;" onclick="initKrishanaAutofill('${h.enroll}','${h.dob}','${h.session||'odd'}')">
+        <span style="font-size:1.1rem;">${h.pinned?'⭐':'👤'}</span>
+        <div style="min-width:0;">
+          <div class="h-enroll">${h.nickname ? `<span style="color:var(--kg-primary)">${h.nickname}</span> — ` : ''}${h.enroll}</div>
+          <div class="h-meta">
+            <span>📅 ${h.dob}</span>
+            <span class="kg-session-tag">${sessionLabels[h.session]||h.session}</span>
+            <span>🕐 ${h.time||''} ${h.date||''}</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;gap:4px;flex-shrink:0;">
+        <button class="h-pin-btn${h.pinned?' active':''}" onclick="initKrishanaTogglePin(${h.id})" title="${h.pinned?'Unpin':'Pin'}">📌</button>
+        <button class="h-del-btn" onclick="initKrishanaDeleteEntry(${h.id})" title="Delete">✕</button>
+      </div>
+    </div>
+  `).join('');
 }
-function initKrishanaAutofill(e,d){
-  kgVib(); document.getElementById('krish-enrollment').value=e;
+
+// Feature: Toggle history panel open/close (hidden by default)
+function initKrishanaToggleHistoryBody(){
+  kgHistOpen = !kgHistOpen;
+  const body = document.getElementById('krish-history-body');
+  const btn = document.getElementById('krish-hist-toggle-btn');
+  if(kgHistOpen){
+    body.classList.add('open');
+    btn.textContent = '🙈 Hide';
+  } else {
+    body.classList.remove('open');
+    btn.textContent = '👁 Show';
+  }
+  kgVib();
+}
+
+// Feature: Autofill from history (also sets session)
+function initKrishanaAutofill(e, d, session){
+  kgVib();
+  document.getElementById('krish-enrollment').value = e;
+  document.getElementById('krish-nickname').value = '';
   if(!kgIsManual) initKrishanaToggleDob();
-  document.getElementById('krish-dob-manual').value=d;
+  document.getElementById('krish-dob-manual').value = d;
+  if(session){
+    document.getElementById('krish-session').value = session;
+    initKrishanaSessionChange();
+  }
   kgToast('⚡ Details Autofilled!');
   window.scrollTo({top:0,behavior:'smooth'});
 }
+
+// Feature: Pin / Unpin
+function initKrishanaTogglePin(id){
+  let hist = initKrishanaGetHistory();
+  hist = hist.map(h => h.id===id ? {...h, pinned:!h.pinned} : h);
+  initKrishanaSaveHistory(hist);
+  initKrishanaRenderHistory(document.getElementById('krish-hist-search').value);
+  initKrishanaUpdateStats();
+  kgVib(); kgToast(hist.find(h=>h.id===id)?.pinned ? '📌 Pinned!' : '📌 Unpinned');
+}
+
+// Feature: Delete single entry
+function initKrishanaDeleteEntry(id){
+  let hist = initKrishanaGetHistory();
+  hist = hist.filter(h => h.id !== id);
+  initKrishanaSaveHistory(hist);
+  initKrishanaRenderHistory(document.getElementById('krish-hist-search').value);
+  initKrishanaUpdateStats();
+  kgVib(); kgToast('🗑️ Entry Deleted');
+}
+
+// Feature: Clear all
 function initKrishanaClearHistory(){
   kgVib();
-  if(confirm('Clear all recent searches?')){ localStorage.removeItem('krish_hist_v14'); initKrishanaRenderHistory(); kgToast('🗑️ History Cleared'); }
+  if(confirm('Saari history delete karni hai? Yeh wapas nahi aayegi.')){ 
+    localStorage.removeItem(KG_HIST_KEY);
+    initKrishanaRenderHistory();
+    initKrishanaUpdateStats();
+    kgToast('🗑️ History Cleared');
+  }
+}
+
+// Feature: Search history
+function initKrishanaSearchHistory(q){
+  initKrishanaRenderHistory(q);
+}
+
+// Feature: Export as CSV
+function initKrishanaExportCSV(){
+  const hist = initKrishanaGetHistory();
+  if(!hist.length){ kgToast('📭 No history to export!'); return; }
+  const rows = [['Name','Enrollment','DOB','Session','Date','Time','Pinned']];
+  hist.forEach(h=>rows.push([h.nickname||'',h.enroll,h.dob,h.session,h.date,h.time||'',h.pinned?'Yes':'No']));
+  const csv = rows.map(r=>r.map(c=>`"${c}"`).join(',')).join('\n');
+  const blob = new Blob([csv],{type:'text/csv'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ResultX_History.csv';
+  a.click();
+  kgToast('📥 CSV Downloaded!');
+}
+
+// ── STATS ──
+function initKrishanaIncrementStat(){
+  const s = JSON.parse(localStorage.getItem(KG_STATS_KEY)||'{"total":0}');
+  s.total = (s.total||0)+1;
+  localStorage.setItem(KG_STATS_KEY, JSON.stringify(s));
+}
+function initKrishanaUpdateStats(){
+  const hist = initKrishanaGetHistory();
+  const s = JSON.parse(localStorage.getItem(KG_STATS_KEY)||'{"total":0}');
+  document.getElementById('krish-stat-total').textContent = s.total||0;
+  document.getElementById('krish-stat-saved').textContent = hist.length;
+  document.getElementById('krish-stat-pinned').textContent = hist.filter(h=>h.pinned).length;
+}
+
+// ── BOTTOM NAV (Feature 3) ──
+function initKrishanaNavHome(){
+  window.scrollTo({top:0,behavior:'smooth'});
+  document.querySelectorAll('.kg-nav-item').forEach(n=>n.classList.remove('active'));
+  document.querySelectorAll('.kg-nav-item')[0].classList.add('active');
+}
+function initKrishanaNavHistory(){
+  const panel = document.getElementById('krish-history-panel');
+  if(panel.style.display==='none'){ kgToast('📭 Check result first to build history!'); return; }
+  // Open history if not open
+  if(!kgHistOpen) initKrishanaToggleHistoryBody();
+  panel.scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.kg-nav-item').forEach(n=>n.classList.remove('active'));
+  document.querySelectorAll('.kg-nav-item')[1].classList.add('active');
+}
+function initKrishanaNavStats(){
+  document.querySelector('.kg-stats-strip').scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.kg-nav-item').forEach(n=>n.classList.remove('active'));
+  document.querySelectorAll('.kg-nav-item')[2].classList.add('active');
 }
 
 // ── UTILITIES ──
@@ -534,16 +1448,18 @@ function initKrishanaToggleSound(){ kgSound=!kgSound; document.getElementById('k
 function initKrishanaToggleTheme(){
   kgVib(); const body=document.body;
   if(body.getAttribute('data-theme')==='dark'){ body.removeAttribute('data-theme'); document.getElementById('krish-theme-btn').textContent='🌙'; localStorage.setItem('krish_theme','light'); }
-  else { body.setAttribute('data-theme','dark'); document.getElementById('krish-theme-btn').textContent='☀️'; localStorage.setItem('krish_theme','dark'); }
+  else{ body.setAttribute('data-theme','dark'); document.getElementById('krish-theme-btn').textContent='☀️'; localStorage.setItem('krish_theme','dark'); }
 }
 function initKrishanaCopy(){ kgVib(); navigator.clipboard.writeText(document.getElementById('krish-link').value).then(()=>kgToast('✅ Link Copied!')); }
 function initKrishanaShare(){ kgVib(); const link=document.getElementById('krish-link').value; if(link) window.open(`https://wa.me/?text=Bhai%20apna%20BTEUP%20result%20check%20karo:%20${encodeURIComponent(link)}`,'_blank'); }
 
-// ── CONFETTI (Original Logic Preserved) ──
+// ── CONFETTI ──
 const kgCanvas=document.getElementById('krish-confetti'), kgCtx=kgCanvas.getContext('2d');
 kgCanvas.width=window.innerWidth; kgCanvas.height=window.innerHeight;
 let kgParticles=[];
 function initKrishanaFireConfetti(){
+  const cfg = JSON.parse(localStorage.getItem(KG_ADMIN_KEY)||'{}');
+  if(cfg.confettiOff) return;
   kgParticles=[];
   for(let i=0;i<150;i++) kgParticles.push({x:window.innerWidth/2,y:window.innerHeight/2,vx:(Math.random()-.5)*16,vy:(Math.random()-.5)*16-5,color:`hsl(${Math.random()*360},100%,55%)`,size:Math.random()*8+4,life:100});
   initKrishanaAnimateConfetti();
@@ -556,7 +1472,7 @@ function initKrishanaAnimateConfetti(){
 }
 window.addEventListener('resize',()=>{ kgCanvas.width=window.innerWidth; kgCanvas.height=window.innerHeight; });
 
-// ── SECURITY (Original Preserved) ──
+// ── SECURITY ──
 document.addEventListener('contextmenu',e=>e.preventDefault());
 document.onkeydown=function(e){
   if(e.keyCode===123) return false;
